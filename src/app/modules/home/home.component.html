@@ -1,0 +1,219 @@
+<!-- HOME -->
+<section id="home" class="homeLanding">
+  <div class="container">
+    <div class="landing-content">
+      <div class="col-md-6">
+        <h1>WHO WE ARE ?</h1>
+        <p>
+          At TECH SKY, we offer top-quality Laser products and services at affordable
+          prices. We are your ultimate destination for
+          Medical Laser Equipment, providing personalized solutions to meet your needs.
+          Our goal is to exceed customer
+          expectations and maintain our legacy of excellence. Contact us today for a
+          complimentary estimate.
+        </p>
+        <a (click)="scrollToElement('contact')" class="section-btn btn btn-default">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LASER PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12">
+        <!-- SECTION TITLE -->
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>LASER PRODUCTS</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- NEWS THUMB -->
+        <div class="news-thumb wow fadeInUp products-card" data-wow-delay="0.4s">
+          <a routerLink="/products/m2-surgical">
+            <img src="../../../../assets/images/product-1.jpg" class="img-responsive" alt="">
+          </a>
+          <div class="news-info">
+            <h3><a routerLink="/products/m2-surgical">M2 SURGICAL LASER SYSTEM</a></h3>
+            <p>Meet your Expectations.</p>
+            <p>M2 surgical Laser with 15 Watt Power is one of the most advanced Laser system for
+              Proctology, Vascular, Lipolysis,
+              Orthopedic and ENT </p>
+            <span><a routerLink="/products/m2-surgical">More
+                Details</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- NEWS THUMB -->
+        <div class="news-thumb wow fadeInUp products-card" data-wow-delay="0.6s">
+          <a routerLink="/products/s1-pro">
+            <img src="../../../../assets/images/product-2.jpg" class="img-responsive" alt="">
+          </a>
+          <div class="news-info">
+            <h3><a routerLink="/products/s1-pro">S1 PRO MULTIPLE LASER SYSTEM</a></h3>
+            <p>Technology makes it possible.</p>
+            <p>This is your 1470 nm Laser system with the best results with 12 watt power</p>
+            <span><a routerLink="/products/s1-pro">More
+                Details</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <!-- NEWS THUMB -->
+        <div class="news-thumb wow fadeInUp products-card" data-wow-delay="0.8s">
+          <a routerLink="/products/laser-fiber">
+            <img src="../../../../assets/images/product-3.jpg" class="img-responsive" alt="">
+          </a>
+          <div class="news-info">
+            <h3><a routerLink="/products/laser-fiber">LASER FIBER</a></h3>
+            <p>Technology makes it possible.</p>
+            <p>Techsky Provide Best quality German laser fiber in different measures for a
+              variety of surgical applications such as
+              Hemorrhoids, Fissure, Fistula, Varcouse viens etc.</p>
+            <span><a routerLink="/products/laser-fiber">More
+                Details</a></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- training -->
+<section id="training" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="">
+          <img src="../../../../assets/images/TRANING.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="about-info">
+          <h2 class="wow fadeInUp">TRANING</h2>
+          <div class="wow fadeInUp">
+            <p>We Provide Training For Different specialists</p>
+            <p>at Tech Sky, it is not just a place to pick a device, it is also a place for
+              training in how to use Laser Device in
+              different surgeries.</p>
+            <a routerLink="/training" class="section-btn btn btn-default">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Laser Access -->
+<section id="accessories">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6 col-sm-6">
+        <div class="about-info">
+          <h2 class="wow fadeInUp">LASER ACCESSORIES</h2>
+          <div class="wow fadeInUp">
+            <p>At Tech Sky, we supply materials and accessories for all of medical laser devices
+              such as ( Laser Fibers, Hand-piece &
+              etc )</p>
+            <a routerLink="/products/accessories" class="section-btn btn btn-default">More Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="">
+          <img src="../../../../assets/images/ACCESSORIES.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <img src="../../../../assets/images/appointment-image.jpg" class="img-responsive" alt="">
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <!-- CONTACT FORM HERE -->
+        <form id="appointment-form" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <!-- SECTION TITLE -->
+          <div class="section-title wow fadeInUp">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="">
+            <div class="col-sm-12 form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" formControlName="name"
+                placeholder="Full Name">
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.name.touched || isFormSubmitted)&& contactForm.controls.name.errors&& contactForm.controls.name.errors.required != null">
+                Name is <strong>Required</strong>
+              </div>
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.name.touched || isFormSubmitted)&& contactForm.controls.name.errors&& contactForm.controls.name.errors.minlength != null">
+                Min length 3 characters
+              </div>
+            </div>
+            <div class="col-sm-12 form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" formControlName="email"
+                placeholder="Your Email">
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.email.touched || isFormSubmitted)&& contactForm.controls.email.errors&& contactForm.controls.email.errors.required != null">
+                Email is <strong>Required</strong>
+              </div>
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.email.touched || isFormSubmitted)&& contactForm.controls.email.errors&& contactForm.controls.email.errors.email != null">
+                Invalid Email Address
+              </div>
+            </div>
+            <div class="col-sm-12 form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" class="form-control" id="phone" name="phone" formControlName="mobileNumber"
+                placeholder="Phone">
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.mobileNumber.touched || isFormSubmitted)&& contactForm.controls.mobileNumber.errors&& contactForm.controls.mobileNumber.errors.required != null">
+                Phone Number is <strong>Required</strong>
+              </div>
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.mobileNumber.touched || isFormSubmitted)&& contactForm.controls.mobileNumber.errors&& contactForm.controls.mobileNumber.errors.pattern != null">
+                Invalid phone number. Please enter a valid number
+              </div>
+            </div>
+            <div class="col-sm-12 form-group">
+              <label for="Message">Additional Message</label>
+              <textarea class="form-control" rows="5" id="message" name="message" formControlName="message"
+                placeholder="Message"></textarea>
+              <div class="text-danger"
+                *ngIf="(contactForm.controls.message.touched || isFormSubmitted)&& contactForm.controls.message.errors&& contactForm.controls.message.errors.maxlength != null">
+                Max length 200 characters
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <button type="submit" class="section-btn btn btn-default" style="width: 100%;padding-block: 12px;"
+                id="cf-submit" name="submit">Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section id="google-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.9061505016048!2d31.1954115!3d30.0395502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847de5da4b3bd%3A0xa9a4f32d90bdd820!2zVGVjaHNreSBDb-KAmSB8INiq2YMg2LPZg9in2Yo!5e0!3m2!1sen!2sus!4v1703271270224!5m2!1sen!2sus"
+    width="100%" height="350" style="border:0;" frameborder="0" allowfullscreen="allow" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
