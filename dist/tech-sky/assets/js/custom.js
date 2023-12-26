@@ -28,6 +28,9 @@
         }, 1000);
         event.preventDefault();
       }
+      else {
+        event.preventDefault();
+      }
     });
   });
 

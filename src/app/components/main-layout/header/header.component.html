@@ -35,26 +35,31 @@
     <!-- MENU LINKS -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a></li>
+        <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/">Home</a></li>
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
             aria-expanded="false">Products <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
                 routerLink="/products/m2-surgical">M2 surgical</a></li>
-            <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/products/s1-pro">S1
+            <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/products/s1-pro">S1
                 pro</a></li>
-            <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
                 routerLink="/products/laser-fiber">Laser Fiber</a></li>
-            <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
                 routerLink="/products/accessories">Accessories</a></li>
           </ul>
         </li>
-        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/surgeries">Surgeries</a>
+        <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/surgeries">Surgeries</a>
         </li>
-        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/training">Training</a>
+        <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/training">Training</a>
         </li>
-        <li><a style="cursor: pointer;" (click)="scrollToElement('contact')" class="">Contact Us</a></li>
+        <li><a style="cursor: pointer;" class="navbarlink" (click)="scrollToElement('contact')" class="">Contact Us</a>
+        </li>
       </ul>
     </div>
   </div>

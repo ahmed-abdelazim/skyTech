@@ -39,7 +39,8 @@
               "src/assets/js/jquery.stellar.min.js",
               "src/assets/js/wow.min.js",
               "src/assets/js/smoothscroll.js",
-              "src/assets/js/custom.js"
+              "src/assets/js/custom.js",
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
@@ -114,7 +115,8 @@
               "src/assets/js/jquery.stellar.min.js",
               "src/assets/js/wow.min.js",
               "src/assets/js/smoothscroll.js",
-              "src/assets/js/custom.js"
+              "src/assets/js/custom.js",
+              "src/assets/js/main.js"
             ]
           }
         },
