@@ -27,8 +27,6 @@
             "styles": [
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/animate.css",
-              "src/assets/css/owl.carousel.css",
-              "src/assets/css/owl.theme.default.min.css",
               "src/assets/css/tooplate-style.css",
               "src/assets/css/bootstrap.min.css",
               "src/styles.css"
@@ -41,7 +39,6 @@
               "src/assets/js/jquery.stellar.min.js",
               "src/assets/js/wow.min.js",
               "src/assets/js/smoothscroll.js",
-              "src/assets/js/owl.carousel.min.js",
               "src/assets/js/custom.js"
             ]
           },
@@ -50,13 +47,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "2mb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 }
               ],
               "outputHashing": "all"
@@ -103,10 +100,26 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/tooplate-style.css",
+              "src/assets/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/jquery.sticky.js",
+              "src/assets/js/jquery.stellar.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/smoothscroll.js",
+              "src/assets/js/custom.js"
+            ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
