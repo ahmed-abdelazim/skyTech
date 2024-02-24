@@ -1418,3 +1418,21 @@ label {
   justify-content: center;
   height: 100%;
 }
+
+
+.laser-fiber {
+  background-image: url(../images/laser-fiber/4..jpg);
+}
+
+.laser-fiber .container,
+.accerioes .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.accerioes {
+  background-image: url(../images/accessories/1.jpg);
+
+}
