@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HomeService } from './service/home.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ export class HomeComponent implements OnInit {
   contactForm: FormGroup;
   isFormSubmitted: boolean = false;
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private homeService: HomeService
   ) { }
   ngOnInit(): void {
     const mobilePattern = /^(010|011|015|012)\d{8}$/;
@@ -28,6 +30,9 @@ export class HomeComponent implements OnInit {
   submitForm() {
     this.isFormSubmitted = true;
     if (this.contactForm.invalid) return;
+    this.homeService.PostMessage(this.contactForm.value).subscribe(res => {
+      console.log(res)
+    })
     console.log(this.contactForm.value)
   }
 }

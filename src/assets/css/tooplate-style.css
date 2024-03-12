@@ -1421,7 +1421,7 @@ label {
 
 
 .laser-fiber {
-  background-image: url(../images/laser-fiber/4..jpg);
+  background-image: url(../images/laser-fiber/4.jpg);
 }
 
 .laser-fiber .container,
@@ -1435,4 +1435,15 @@ label {
 .accerioes {
   background-image: url(../images/accessories/1.jpg);
 
+}
+
+.m2-Surgical-landing.workshops {
+  background-image: url(../images/workshops/Landing/landing.gif);
+}
+
+.workshops .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

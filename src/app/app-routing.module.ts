@@ -22,8 +22,12 @@ const routes: Routes = [
         loadChildren: () => import('./modules/surgeries/surgeries.module').then(m => m.SurgeriesModule)
       },
       {
-        path: 'training',
-        loadChildren: () => import('./modules/training/training.module').then(m => m.TrainingModule)
+        path: 'news',
+        loadChildren: () => import('./modules/training/news.module').then(m => m.NewsModule)
+      },
+      {
+        path: 'workshops',
+        loadChildren: () => import('./modules/workshops/workshops.module').then(m => m.WorkshopsModule)
       }
     ]
   },
