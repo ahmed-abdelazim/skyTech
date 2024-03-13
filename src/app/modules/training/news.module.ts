@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NewsComponent } from './news/news.component';
 import { NewsRoutingModule } from './news-routing.module';
 import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     NewsRoutingModule,
-    RouterModule
+    RouterModule,
+    CarouselModule
   ]
 })
 export class NewsModule { }

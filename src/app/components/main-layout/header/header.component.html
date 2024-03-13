@@ -61,7 +61,8 @@
         <li><a routerLinkActive="active" class="navbarlink" [routerLinkActiveOptions]="{exact: true}"
             routerLink="/news">News</a>
         </li>
-        <li><a style="cursor: pointer;" class="navbarlink" (click)="scrollToElement('contact')" class="">Contact Us</a>
+        <li *ngIf="showContactUs"><a style="cursor: pointer;" class="navbarlink" (click)="scrollToElement('contact')"
+            class="">Contact Us</a>
         </li>
       </ul>
     </div>

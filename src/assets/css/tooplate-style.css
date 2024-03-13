@@ -1441,9 +1441,14 @@ label {
   background-image: url(../images/workshops/Landing/landing.gif);
 }
 
-.workshops .container {
+.workshops .container,
+.news .container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+.m2-Surgical-landing.news {
+  background-image: url(../images/news/newsLanding.gif);
 }
