@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from './service/home.service';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
     this.contactForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      mobileNumber: ['', [Validators.required, Validators.pattern(mobilePattern)]],
+      mobile: ['', [Validators.required, Validators.pattern(mobilePattern)]],
       message: ['', [Validators.maxLength(200)]],
     })
   }
@@ -27,12 +28,20 @@ export class HomeComponent implements OnInit {
     const element = document.getElementById(elementId);
     element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  submitForm() {
+  submitForm(e: Event) {
     this.isFormSubmitted = true;
     if (this.contactForm.invalid) return;
-    this.homeService.PostMessage(this.contactForm.value).subscribe(res => {
-      console.log(res)
-    })
-    console.log(this.contactForm.value)
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_nivpolg', 'template_5fxhldd', e.target as HTMLFormElement, {
+        publicKey: 'RFYd7FDF3J72_OjHC',
+      })
+      .then(
+        () => {
+          this.contactForm.reset();
+          this.isFormSubmitted = false;
+        }
+      );
   }
 }
