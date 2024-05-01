@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,12 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+      progressBar: true,
+      timeOut: 2000,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
